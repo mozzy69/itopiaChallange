@@ -32,18 +32,32 @@ body, html {
 
 #mainNav ul{
     display: inline-block;
-    padding: 0px;
+    padding-top: 6px;
     margin: 0px;
     vertical-align: middle;
 }
 
 #mainNav ul ul{
+    margin-top: -6px;
+}
+
+#mainNav ul span{
     
 }
 
 #mainNav ul li{
     display: inline-block;
     font-size: 18px;
+}
+
+.navIcons{
+    margin-left: 5px;
+    margin-right: 5px;
+    max-height: 18px;
+}
+
+.sticky{
+    position: fixed;
 }
 
 .bgimg-1, .bgimg-2 {
@@ -150,7 +164,8 @@ body, html {
   position: absolute;
   left: 12px;
   top: -5%;
-  padding: 6px    
+  padding: 6px;
+  z-index: 2;     
 }
 
 .generalForm{
@@ -160,7 +175,7 @@ body, html {
   max-width: 400px;
   margin: -10px auto;
   padding: 16px;
-  background: #F7F7F7;   
+  background: #F7F7F7;      
 }
 
 .generalForm h3{
@@ -174,17 +189,17 @@ body, html {
 
 .formInput{
   width: 80%;
-	outline: none;
-	box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	width: 100%;
-	background: #fff;
-	margin-bottom: 4%;
-	border: 1px solid #ccc;
-	padding: 3%;
-	color: #555; 
-    border-radius: 20px;
+  outline: none;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  width: 100%;
+  background: #fff;
+  margin-bottom: 4%;
+  border: 1px solid #ccc;
+  padding: 3%;
+  color: #555; 
+  border-radius: 20px;    
 }
 
 .footerContainer{ 
