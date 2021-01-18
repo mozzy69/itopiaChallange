@@ -24,22 +24,26 @@ body, html {
     float: right;
     z-index: 1;
     top: 20px;
-    right: -50px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
     height: 48px;
     padding-right: 60px;
 }
 
-#mainNav ul, #mainNav ul ul li{
+#mainNav ul{
     display: inline-block;
     padding: 0px;
     margin: 0px;
     vertical-align: middle;
 }
 
+#mainNav ul ul{
+    
+}
+
 #mainNav ul li{
     display: inline-block;
-    font-size: 12px;
-    
+    font-size: 18px;
 }
 
 .bgimg-1, .bgimg-2 {
@@ -57,7 +61,7 @@ body, html {
 
 .bgimg-2 {
   background-image: url("../images/outro01x2.png");
-  min-height: 800px;
+  min-height: 400px;
 }
 
 .caption {
@@ -69,12 +73,12 @@ body, html {
   text-align: center;
 }
 
-.tagline {   
+.foreground {   
   padding: 18px;
   font-size: 25px;
   letter-spacing: 1px;
   box-shadow: 0px 3px 6px #000029;
-  background: #FFFFFF 0% 0% no-repeat padding-box;    
+  background: #FFFFFF 0% 0% no-repeat padding-box; 
   border-radius: 70px;
   color: #222222;    
   opacity: 1;    
@@ -95,18 +99,17 @@ body, html {
 }
 
 .newProductsContainer{
-  width: 100%;
-  height: 500px;    
+  width: 100%;   
   background: #FFFFFF 0% 0% no-repeat padding-box;
   opacity: 1;
+  padding-bottom: 50px;    
 }
 
 .newProducts{
   background: #FFFFFF 0% 0% no-repeat padding-box;
   border-radius: 20px;
   opacity: 1;
-  width: 95%;
-  height: 200px;    
+  width: 95%;    
   position: relative;
   left: 1.5%;
   top: -5%;
@@ -115,6 +118,8 @@ body, html {
 
 .productMain{
     width: 25%;
+    max-width: 240px;
+    min-width: 120px;
 }
 
 .productMain{
@@ -150,14 +155,40 @@ body, html {
 
 .generalForm{
   background: #FFFFFF 0% 0% no-repeat padding-box;
-  box-shadow: 0px 3px 16px #00000029;
+  box-shadow: 0px 3px 16px #000029;
   border-radius: 20px;
-  opacity: 1;    
+  max-width: 400px;
+  margin: -10px auto;
+  padding: 16px;
+  background: #F7F7F7;   
+}
+
+.generalForm h3{
+	padding: 20px 0;
+	font-size: 140%;
+	font-weight: 300;
+	text-align: center;
+	color: #222222;
+	margin: -16px -16px 16px -16px;
 }
 
 .formInput{
-  margin-left: 11.25%;
-  width: 80%;    
+  width: 80%;
+  -webkit-transition: all 0.30s ease-in-out;
+	-moz-transition: all 0.30s ease-in-out;
+	-ms-transition: all 0.30s ease-in-out;
+	-o-transition: all 0.30s ease-in-out;
+	outline: none;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	width: 100%;
+	background: #fff;
+	margin-bottom: 4%;
+	border: 1px solid #ccc;
+	padding: 3%;
+	color: #555; 
+    border-radius: 20px;
 }
 
 .footerContainer{
@@ -171,6 +202,7 @@ https://flickity.metafizzy.co
 
 .flickity-enabled {
   position: relative;
+  height: 70%;    
 }
 
 .flickity-enabled:focus { outline: none; }
@@ -276,11 +308,9 @@ https://flickity.metafizzy.co
 /* ---- page dots ---- */
 
 .flickity-page-dots {
-  position: absolute;
-  width: 100%;
-  bottom: -25px;
-  padding: 0;
-  margin: 0;
+  position: absolute;    
+  top: 0px;
+  transform: translateY(80%);
   list-style: none;
   text-align: center;
   line-height: 1;
