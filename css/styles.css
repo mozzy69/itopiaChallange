@@ -113,12 +113,25 @@ body, html {
   padding: 6px     
 }
 
+.productMain{
+    width: 25%;
+}
+
+.productMain img{
+    width: 100%;
+    max-width: 320px;
+}
+
 .productDesc{
-    
+    text-align: center;
 }
 
 .productName{
     
+}
+
+#generalButton_Product{
+    width: 100%;
 }
 
 .generalFormContainer{
