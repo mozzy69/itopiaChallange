@@ -14,31 +14,65 @@
 </head>
 
 <body>
-	<header></header>
+	<header>
+    <nav>
+        <div class="tagline" id="logo">
+        <picture>
+            <source media="(max-width: 360px)" srcset="images/kanba.png">
+            <img src="images/kanbax2.png">
+        </picture>
+        </div>
+        <div class="tagline" id="mainNav">
+            <ul>
+                <li>Bedroom</li>
+                <li>Study</li>
+                <li>Playroom</li>
+                <li>Accessories</li>
+                <li>Storage</li>
+                <li>Toys</li>
+                <ul>
+                    <li>Account</li>
+                    <li>Wishlist</li>
+                    <li>Cart</li>
+                </ul>
+            </ul>
+        </div>
+    </nav>
+    </header>
 	<main>
-    <!--Hero Image-->
+    <!--------------Hero Image-------------->
     <section>    
         <div class="bgimg-1">
             <div class="caption">
                 <h1 class="tagline">Lifestyle decor for fashionable families.</h1>
             </div>
             <div class="caption" >
-                <h4 class="tagline" id="createAcc">Create an account</h4>
+                <button class="generalButton" id="createAccount">Create an account</button>
             </div>
             
         </div>
     </section>
-    <!--End Hero Image-->
-    <!--New Products-->    
+    <!------------End Hero Image------------>
+    <!-------------New Products------------->    
     <section>
         <div class="newProductsContainer">
             <div class="newProducts">
-            
+                <div class="productMain">
+                    <picture>
+                        <source media="(max-width: 360px)" srcset="images/products/cabinet.png">
+                        <img src="images/products/cabinetx2.png">
+                    </picture>
+                    <div class="productDesc">
+                        <h5 class="productName">Product name goes here over a few lines</h5>
+                        <h5 class="productPrice">R000.00</h5>
+                        <button class="generalButton">Add to cart</button>
+                    </div>
+                </div>
             </div>
         </div>
     </section>    
-    <!--End New Products-->    
-    <!--Outro-->
+    <!-----------End New Products----------->    
+    <!----------------Outro----------------->
     <section>
         <div class="bgimg-2">
         <div class="generalFormContainer">
@@ -53,7 +87,8 @@
             </div>
         </div>        
     </div>    
-    </section>    
+    </section>
+    <!------------End Outro----------------->    
     </main>
 	<footer></footer>
 	<script type="text/javascript" src=""></script>
