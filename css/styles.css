@@ -1,0 +1,97 @@
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+.bgimg-1, .bgimg-2, .bgimg-3 {
+  position: relative;
+  opacity: 0.65;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+.bgimg-1 {
+  background-image: url("../images/hero01x2.png");
+  min-height: 800px;
+}
+
+.bgimg-2 {
+  background-image: url("../images/outro01x2.png");
+  min-height: 800px;
+}
+
+.caption {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 60%; 
+  margin-left: 25%;    
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+}
+
+.tagline {   
+  padding: 18px;
+  font-size: 25px;
+  letter-spacing: 1px;
+  box-shadow: 0px 3px 6px #000029;
+  background: #FFFFFF 0% 0% no-repeat padding-box;    
+  border-radius: 70px;
+  color: #222222;    
+  opacity: 1;    
+}
+
+.newProductsContainer{
+  width: 100%;
+  height: 200px;    
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  opacity: 1;
+}
+
+.newProducts{
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  border-radius: 20px;
+  opacity: 1;
+  width: 95%;
+  height: 200px;    
+  position: relative;
+  left: 1.5%;
+  top: -5%;
+  padding: 6px     
+}
+
+#createAcc{
+  margin-top: 105px;;
+  background: #C82975 0% 0% no-repeat padding-box;
+  border-radius: 70px;
+  opacity: 1;
+  color: #FFFFFF;
+  font: normal normal 600 20px/45px Raleway;
+  width: 50%;
+  height: 24px;
+  padding-top: 0;
+  margin-left: 22.5%    
+}
+
+.generalFormContainer{
+  width: 33%;
+  position: absolute;
+  left: 12px;
+  top: -5%;
+  padding: 6px    
+}
+
+.generalForm{
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 16px #00000029;
+  border-radius: 20px;
+  opacity: 1;    
+}
+
+.formInput{
+  margin-left: 11.25%;
+  width: 80%;    
+}
