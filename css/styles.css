@@ -28,6 +28,11 @@ body, html {
     border-bottom-right-radius: 0px;
     height: 48px;
     padding-right: 60px;
+    -webkit-transition: all 0.30s ease-in-out;
+	-moz-transition: all 0.30s ease-in-out;
+	-ms-transition: all 0.30s ease-in-out;
+	-o-transition: all 0.30s ease-in-out;
+    transition: all 0.30s ease-in-out;
 }
 
 #mainNav ul{
@@ -44,6 +49,16 @@ body, html {
 #mainNav ul li{
     display: inline-block;
     font-size: 18px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + main {
+  padding-top: 60px;
 }
 
 .bgimg-1, .bgimg-2 {
@@ -174,10 +189,6 @@ body, html {
 
 .formInput{
   width: 80%;
-  -webkit-transition: all 0.30s ease-in-out;
-	-moz-transition: all 0.30s ease-in-out;
-	-ms-transition: all 0.30s ease-in-out;
-	-o-transition: all 0.30s ease-in-out;
 	outline: none;
 	box-sizing: border-box;
 	-webkit-box-sizing: border-box;
@@ -191,8 +202,14 @@ body, html {
     border-radius: 20px;
 }
 
-.footerContainer{
-  text-align: center;    
+.footerContainer{ 
+  text-align: center; 
+  margin-top: 30px;
+  padding-bottom: 50px;     
+}
+
+.footerContainer ul li{
+    display: inline-block;
 }
 
 
