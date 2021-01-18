@@ -55,9 +55,10 @@
     <!------------End Hero Image------------>
     <!-------------New Products------------->    
     <section>
+        <article>
         <div class="newProductsContainer">
-            <div class="newProducts">
-                <div class="productMain">
+            <ul class="newProducts main-gallery">
+                <li class="productMain gallery-cell">
                     <picture>
                         <source media="(max-width: 360px)" srcset="images/products/cabinet.png">
                         <img src="images/products/cabinetx2.png">
@@ -65,11 +66,73 @@
                     <div class="productDesc">
                         <h5 class="productName">Product name goes here over a few lines</h5>
                         <h5 class="productPrice">R000.00</h5>
-                        <button class="generalButton">Add to cart</button>
+                        <button class="generalButton" id="generalButton_Product">Add to cart</button>
                     </div>
-                </div>
-            </div>
+                </li>
+                
+                <li class="productMain gallery-cell">
+                    <picture>
+                        <source media="(max-width: 360px)" srcset="images/products/mags.png">
+                        <img src="images/products/magsx2.png">
+                    </picture>
+                    <div class="productDesc">
+                        <h5 class="productName">Product name goes here over a few lines</h5>
+                        <h5 class="productPrice">R000.00</h5>
+                        <button class="generalButton" id="generalButton_Product">Add to cart</button>
+                    </div>
+                </li>
+                
+                <li class="productMain gallery-cell">
+                    <picture>
+                        <source media="(max-width: 360px)" srcset="images/products/shelf.png">
+                        <img src="images/products/shelfx2.png">
+                    </picture>
+                    <div class="productDesc">
+                        <h5 class="productName">Product name goes here over a few lines</h5>
+                        <h5 class="productPrice">R000.00</h5>
+                        <button class="generalButton" id="generalButton_Product">Add to cart</button>
+                    </div>
+                </li>
+                
+                <li class="productMain gallery-cell">
+                    <picture>
+                        <source media="(max-width: 360px)" srcset="images/products/bed.png">
+                        <img src="images/products/bedx2.png">
+                    </picture>
+                    <div class="productDesc">
+                        <h5 class="productName">Product name goes here over a few lines</h5>
+                        <h5 class="productPrice">R000.00</h5>
+                        <button class="generalButton" id="generalButton_Product">Add to cart</button>
+                    </div>
+                </li>
+                
+                <li class="productMain gallery-cell">
+                    <picture>
+                        <source media="(max-width: 360px)" srcset="images/products/table.png">
+                        <img src="images/products/tablex2.png">
+                    </picture>
+                    <div class="productDesc">
+                        <h5 class="productName">Product name goes here over a few lines</h5>
+                        <h5 class="productPrice">R000.00</h5>
+                        <button class="generalButton" id="generalButton_Product">Add to cart</button>
+                    </div>
+                </li>
+                
+                <li class="productMain gallery-cell">
+                    <picture>
+                        <source media="(max-width: 360px)" srcset="images/products/plant.png">
+                        <img src="images/products/plantx2.png">
+                    </picture>
+                    <div class="productDesc">
+                        <h5 class="productName">Product name goes here over a few lines</h5>
+                        <h5 class="productPrice">R000.00</h5>
+                        <button class="generalButton" id="generalButton_Product">Add to cart</button>
+                    </div>
+                </li>
+                
+            </ul>
         </div>
+        </article>    
     </section>    
     <!-----------End New Products----------->    
     <!----------------Outro----------------->
@@ -91,7 +154,8 @@
     <!------------End Outro----------------->    
     </main>
 	<footer></footer>
-	<script type="text/javascript" src=""></script>
+    <script src="scripts/flickity.pkgd.min.js"></script>
+    <script src="scripts/kanba.js"></script>
 </body>
 
 </html>
