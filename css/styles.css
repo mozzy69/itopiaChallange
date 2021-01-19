@@ -5,6 +5,10 @@ body, html {
   font-family: 'Raleway', sans-serif;    
 }
 
+button:hover{
+    cursor:pointer;
+}
+
 /****************NAV****************/
 
 .logo{
@@ -76,6 +80,26 @@ body, html {
     transition: all 0.5s;
 }
 
+.mainNav button{
+    text-decoration: none;
+    color : #222;
+    padding: 6px;
+    border-radius: 20px;
+    display: inline-block;
+    font-size: 18px;
+    border: none;
+    background-color: #fff;
+    font-family: 'Raleway', sans-serif;
+}
+
+.mainNav button:hover{
+    background-color: #C82975;
+    color: #fff;
+    border-radius: 20px;
+    padding: 6px;
+    transition: all 0.5s;
+}
+
 .navIcons{
     margin-left: 5px;
     margin-right: 5px;
@@ -93,8 +117,9 @@ body, html {
     }
 
 .cartSlideOut{
+    transform: translateX(500px);
     position: fixed;
-    top: 80px;
+    
     right: 0px;
     background-color: #fff;
     z-index: 1;
@@ -108,11 +133,26 @@ body, html {
     border-top-right-radius: 0;
     color: #222222;
     text-align: center;
+    transition: all 0.3s ease-in;
+}
+
+.cartSlideOut table td{
+    width: 50%;
+    padding: 6px;
+}
+
+.cartSlideOut table tr{
+    padding-bottom: 10px;
 }
 
 .cartSlideOut img{
     width: 50%;
     max-width: 220px;
+}
+
+.cartDisplay{
+   transform: translateX(0px);
+   transition: all 0.4s ease-out;
 }
 
 

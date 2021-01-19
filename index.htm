@@ -37,11 +37,11 @@
                 <li><a href="#">Toys</a></li>
                 <li><a href="#"><img src="images/icon-header-account.svg" alt="account icon" class="navIcons">Account</a></li>
                 <li><a href="#"><img src="images/love-heart-keyhole.svg" alt="heart icon" class="navIcons">Wishlist</a></li>
-                <li><a href="#"><img src="images/shopping-cart.svg" class="navIcons">Cart</a></li>
+                <li><button onclick="displayCart()"><img src="images/shopping-cart.svg" class="navIcons">Cart</button></li>
                 <li><div class="generalButton">0</div></li>
             </ul>
         </div>
-        <div class="cartSlideOut">
+        <div class="cartSlideOut" id="cartLineItems">
             <table>
             <tr>
                 <th>Item</th>
@@ -50,6 +50,17 @@
             <tr>
                 <td><img src="images/products/cartItem1.png" alt="cart Item 01"></td>
                 <td>R000.00</td>
+            </tr>
+            <tr>
+                <td><img src="images/products/cartItem2.png" alt="cart Item 01"></td>
+                <td>R000.00</td>
+            </tr>
+            <tr>
+                <td><img src="images/products/cartItem3.png" alt="cart Item 01"></td>
+                <td>R000.00</td>
+            </tr> 
+            <tr>
+                <td colspan="2">R000.00</td>
             </tr>    
             </table>
         </div>

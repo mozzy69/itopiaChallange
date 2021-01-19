@@ -18,24 +18,34 @@ let mainLogo = document.getElementById("mainLogo");
 
 
 // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
-function stickyNav() {
-  //sticky = mainNav.offsetTop;    
+function stickyNav() {    
   if (window.pageYOffset >= sticky) {
     mainNav.classList.add("sticky");
     mainLogo.classList.add("fadeLogo"); 
-    mainLogo.classList.remove("foreground");  
-    //console.log(window.pageYOffset);  
+    mainLogo.classList.remove("foreground");
+    cartLineItems.style.top = "80px";  
   } else {
     mainNav.classList.remove("sticky");
     mainLogo.classList.remove("fadeLogo");  
     mainLogo.classList.add("foreground");   
     console.log(sticky);
+    cartLineItems.style.top = "100px";  
   }
 }
 
 window.onscroll = function(){
     stickyNav();
 };
+
+let displayCart = ()=>{
+    let cartLineItems = document.getElementById("cartLineItems");
+    /*if(stickyNav()){
+        cartLineItems.style.top = "80px";
+    }else{
+        cartLineItems.style.top = "100px";
+    }*/
+    cartLineItems.classList.toggle("cartDisplay");
+}
 
 let userData = ()=>{
                     var xhr = new XMLHttpRequest(); 
