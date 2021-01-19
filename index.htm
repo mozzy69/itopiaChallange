@@ -38,7 +38,7 @@
                 <li><a href="#"><img src="images/icon-header-account.svg" alt="account icon" class="navIcons">Account</a></li>
                 <li><a href="#"><img src="images/love-heart-keyhole.svg" alt="heart icon" class="navIcons">Wishlist</a></li>
                 <li><button onclick="displayCart()"><img src="images/shopping-cart.svg" class="navIcons">Cart</button></li>
-                <li><div class="generalButton">0</div></li>
+                <li><div class="generalButton" id="cartNumItems">3</div></li>
             </ul>
         </div>
         <div class="cartSlideOut" id="cartLineItems">
@@ -92,7 +92,7 @@
                     <div class="productDesc">
                         <h5 class="productName">Product name goes here over a few lines</h5>
                         <h5 class="productPrice">R000.00</h5>
-                        <button class="generalButton" id="generalButton_Product">Add to cart</button>
+                        <button class="generalButton" id="generalButton_Product" onclick="updateCartItems()">Add to cart</button>
                     </div>
                 </li>
                 

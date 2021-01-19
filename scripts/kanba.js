@@ -5,9 +5,6 @@ var flkty = new Flickity( '.main-gallery', {
   wrapAround: true    
 });
 
-
-
-
 // Get the navbar
 let mainNav = document.getElementById("stickyNav");
 
@@ -28,7 +25,7 @@ function stickyNav() {
     mainNav.classList.remove("sticky");
     mainLogo.classList.remove("fadeLogo");  
     mainLogo.classList.add("foreground");   
-    console.log(sticky);
+    //console.log(sticky);
     cartLineItems.style.top = "100px";  
   }
 }
@@ -39,12 +36,15 @@ window.onscroll = function(){
 
 let displayCart = ()=>{
     let cartLineItems = document.getElementById("cartLineItems");
-    /*if(stickyNav()){
-        cartLineItems.style.top = "80px";
-    }else{
-        cartLineItems.style.top = "100px";
-    }*/
     cartLineItems.classList.toggle("cartDisplay");
+}
+
+let updateCartItems =()=>{
+    let cartItems = document.getElementById("cartNumItems");
+    let itemsInCart = parseInt(cartItems.innerHTML);
+    console.log(itemsInCart);
+    itemsInCart++;
+    cartItems.innerHTML = itemsInCart;
 }
 
 let userData = ()=>{
