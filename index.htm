@@ -44,8 +44,8 @@
         <div class="cartSlideOut" id="cartLineItems">
             <table>
             <tr>
-                <th>Item</th>
-                <th>Price</th>
+                <th>Cart</th>
+                <th><button onclick="displayCart()">&#10006;</button></th>
             </tr>
             <tr>
                 <td><img src="images/products/cartItem1.png" alt="cart Item 01"></td>
@@ -60,9 +60,11 @@
                 <td>R000.00</td>
             </tr> 
             <tr>
-                <td colspan="2">R000.00</td>
-            </tr>    
+                <td>Subtotal</td>
+                <td>R000.00</td>
+            </tr>  
             </table>
+            <div class="generalButton" style="width: 100%; margin-top: 12px; margin-bottom: 12px; ">Checkout</div>  
         </div>
     </nav>
 	<main>
@@ -104,7 +106,7 @@
                     <div class="productDesc">
                         <h5 class="productName">Product name goes here over a few lines</h5>
                         <h5 class="productPrice">R000.00</h5>
-                        <button class="generalButton" id="generalButton_Product">Add to cart</button>
+                        <button class="generalButton" id="generalButton_Product" onclick="updateCartItems()">Add to cart</button>
                     </div>
                 </li>
                 
@@ -116,7 +118,7 @@
                     <div class="productDesc">
                         <h5 class="productName">Product name goes here over a few lines</h5>
                         <h5 class="productPrice">R000.00</h5>
-                        <button class="generalButton" id="generalButton_Product">Add to cart</button>
+                        <button class="generalButton" id="generalButton_Product" onclick="updateCartItems()">Add to cart</button>
                     </div>
                 </li>
                 
@@ -128,7 +130,7 @@
                     <div class="productDesc">
                         <h5 class="productName">Product name goes here over a few lines</h5>
                         <h5 class="productPrice">R000.00</h5>
-                        <button class="generalButton" id="generalButton_Product">Add to cart</button>
+                        <button class="generalButton" id="generalButton_Product" onclick="updateCartItems()">Add to cart</button>
                     </div>
                 </li>
                 
@@ -140,7 +142,7 @@
                     <div class="productDesc">
                         <h5 class="productName">Product name goes here over a few lines</h5>
                         <h5 class="productPrice">R000.00</h5>
-                        <button class="generalButton" id="generalButton_Product">Add to cart</button>
+                        <button class="generalButton" id="generalButton_Product" onclick="updateCartItems()">Add to cart</button>
                     </div>
                 </li>
                 
@@ -152,7 +154,7 @@
                     <div class="productDesc">
                         <h5 class="productName">Product name goes here over a few lines</h5>
                         <h5 class="productPrice">R000.00</h5>
-                        <button class="generalButton" id="generalButton_Product">Add to cart</button>
+                        <button class="generalButton" id="generalButton_Product" onclick="updateCartItems()">Add to cart</button>
                     </div>
                 </li>
                 
@@ -165,19 +167,20 @@
     <section>
         <div class="bgimg-2">
         <div class="generalFormContainer">
-            <div class="generalForm">
+            <div id="generalForm">
                 <h3>Tell us about yourself</h3>
                 <form>
-                    <input class="formInput" type="text" placeholder="First name">
-                    <input class="formInput" type="text" placeholder="Your city">
-                    <input class="formInput" type="text" placeholder="Favourite color">
-                    <input class="formInput" type="text" placeholder="Favourite color">
-                    <input class="formInput" type="text" placeholder="No. of children">
-                    <button type="button" class="generalButton" id="generalButton_form">Submit</button>
+                    <input class="formInput" type="text" id="formFirstName" placeholder="First name">
+                    <input class="formInput" type="text" id ="formCity" placeholder="Your city">
+                    <input class="formInput" type="text" id="formColor" placeholder="Favourite color">
+                    <input class="formInput" type="text" id="formAnimal" placeholder="Favourite animal">
+                    <input class="formInput" type="number" id="formChildren" placeholder="No. of children">
+                    <button type="button" class="generalButton" id="generalButton_form" onclick="getUserData()">Submit</button>
                 </form>    
             </div>
         </div>
-         
+        <div id="formContent"></div> 
+            
         <footer>
         <div class="footerContainer">
             <img alt="logo" src="images/kanbax2.png">

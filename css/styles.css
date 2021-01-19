@@ -120,6 +120,8 @@ button:hover{
     transition: all .3s;
     }
 
+/*********CART**************/
+
 .cartSlideOut{
     transform: translateX(500px);
     position: fixed;
@@ -139,6 +141,14 @@ button:hover{
     transition: all 0.3s ease-in;
 }
 
+.cartSlideOut table{
+    border-collapse: collapse;
+}
+
+.cartSlideOut table th{
+    text-align: left;
+}
+
 .cartSlideOut table td{
     width: 50%;
     padding: 6px;
@@ -148,6 +158,27 @@ button:hover{
     padding-bottom: 10px;
 }
 
+.cartSlideOut table tr:first-child{
+    border-bottom-color: #0000004D;
+    border-bottom-style: solid;
+}
+
+.cartSlideOut table tr:not(:first-child):not(:last-child):not(:nth-last-child(2)){
+    border-bottom-color: #0000004D;
+    border-bottom-style: dashed;
+}
+
+.cartSlideOut table tr:nth-last-child(2){
+    border-bottom-color: #0000004D;
+    border-bottom-style: solid;
+}
+
+.cartSlideOut table tr:last-child{
+    border-bottom-color: #0000004D;
+    border-bottom-style: none;
+}
+
+
 .cartSlideOut img{
     width: 50%;
     max-width: 220px;
@@ -156,6 +187,19 @@ button:hover{
 .cartDisplay{
    transform: translateX(0px);
    transition: all 0.4s ease-out;
+}
+
+.cartDisplay table button{
+    text-decoration: none;
+    color : #222;
+    padding: 6px;
+    border-radius: 20px;
+    display: inline-block;
+    font-size: 18px;
+    border: none;
+    background-color: #fff;
+    font-family: 'Raleway', sans-serif;
+    float: right;
 }
 
 
@@ -281,8 +325,7 @@ button:hover{
   z-index: 2;     
 }
 
-.generalForm{
-  background: #FFFFFF 0% 0% no-repeat padding-box;
+#generalForm{
   box-shadow: 0px 3px 16px #000029;
   border-radius: 20px;
   max-width: 400px;
@@ -291,7 +334,7 @@ button:hover{
   background: #F7F7F7;      
 }
 
-.generalForm h3{
+#generalForm h3{
 	padding: 20px 0;
 	font-size: 140%;
 	font-weight: 300;
@@ -327,6 +370,21 @@ button:hover{
 
 #generalButton_form{
     width: 100%;
+}
+
+.formContentDynamic{
+    width: 40%;
+    height: 100px;
+    background-color: aliceblue;
+    position: relative;
+    z-index: 3;
+    box-shadow: 0px 3px 16px #000029;
+    border-radius: 20px;
+    max-width: 400px;
+    margin: -10px auto;
+    padding: 16px;
+    background: #F7F7F7; 
+    transition: all 0.3s;
 }
 
 /****************FOOTER****************/
@@ -611,3 +669,6 @@ https://flickity.metafizzy.co
 .flickity-page-dots .dot.is-selected {
   opacity: 1;
 }
+
+/**********MEDIA QUERIES**************/
+

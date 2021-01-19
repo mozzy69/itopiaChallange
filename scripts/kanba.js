@@ -47,6 +47,28 @@ let updateCartItems =()=>{
     cartItems.innerHTML = itemsInCart;
 }
 
+let getUserData = ()=>{
+    let firstName = document.getElementById("formFirstName").value;
+    let city = document.getElementById("formCity").value;
+    let color = document.getElementById("formColor").value;
+    let animal = document.getElementById("formAnimal").value;
+    let children = document.getElementById("formChildren").value;
+    console.log(firstName + city + color + animal + children);
+    let formContent = document.getElementById("formContent");
+    formContent.classList.add("formContentDynamic");
+    formContent.innerHTML = "<button onclick=\"resetForm()\">&#10006;</button>" + "Hi " + firstName + ". Thanks for signing up! <br> Your city is " +city + " and your favourite color is "+ color + ", your favourite animal is " + animal + " and you have "+children+ " children. We'll be in touch shorly.";
+}
+
+let resetForm = ()=>{
+    let formContent = document.getElementById("formContent");
+    formContent.innerHTML = "";
+    formContent.classList.toggle("formContentDynamic");
+    document.getElementById("formFirstName").value = document.getElementById("formCity").value =
+    document.getElementById("formColor").value =
+    document.getElementById("formAnimal").value =
+    document.getElementById("formChildren").value = "";
+}
+
 let userData = ()=>{
                     var xhr = new XMLHttpRequest(); 
                     xhr.onreadystatechange = function() {
