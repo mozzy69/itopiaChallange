@@ -22,11 +22,13 @@ function stickyNav() {
   //sticky = mainNav.offsetTop;    
   if (window.pageYOffset >= sticky) {
     mainNav.classList.add("sticky");
-    mainLogo.classList.add("fadeLogo");  
+    mainLogo.classList.add("fadeLogo"); 
+    mainLogo.classList.remove("foreground");  
     //console.log(window.pageYOffset);  
   } else {
     mainNav.classList.remove("sticky");
     mainLogo.classList.remove("fadeLogo");  
+    mainLogo.classList.add("foreground");   
     console.log(sticky);
   }
 }

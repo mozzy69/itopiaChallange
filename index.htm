@@ -17,14 +17,16 @@
 </head>
 
 <body>
-	<header>
+	
     <nav>
+        <header>
         <div class="foreground logo" id="mainLogo">
         <picture>
             <source media="(max-width: 360px)" srcset="images/kanba.png">
             <img src="images/kanbax2.png">
         </picture>
         </div>
+        </header>
         <div class="mainNav" id="stickyNav">
             <ul>
                 <li><a href="#">Bedroom</a></li>
@@ -38,15 +40,26 @@
                 <li><a href="#"><img src="images/shopping-cart.svg" class="navIcons">Cart</a></li>
                 <li><div class="generalButton">0</div></li>
             </ul>
-        </div>      
+        </div>
+        <div class="cartSlideOut">
+            <table>
+            <tr>
+                <th>Item</th>
+                <th>Price</th>
+            </tr>
+            <tr>
+                <td><img src="images/products/cartItem1.png" alt="cart Item 01"></td>
+                <td>R000.00</td>
+            </tr>    
+            </table>
+        </div>
     </nav>
-    </header>
 	<main>
     <!--------------Hero Image-------------->
     <section>    
         <div class="bgimg-1">
             <div class="caption">
-                <h1 class="foreground">Lifestyle decor for fashionable families.</h1>
+                <h1 class="foreground" id="mainSlogan">Lifestyle decor for fashionable families.</h1>
             </div>
             <div class="caption" >
                 <button class="generalButton" id="createAccount">Create an account</button>
