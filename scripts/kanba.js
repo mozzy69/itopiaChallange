@@ -7,25 +7,21 @@ var flkty = new Flickity( '.main-gallery', {
 
 // Get the navbar
 let mainNav = document.getElementById("stickyNav");
-
 // Get the offset position of the navbar
 let sticky = mainNav.offsetTop;
-
 let mainLogo = document.getElementById("mainLogo");
-
 
 // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
 function stickyNav() {    
-  if (window.pageYOffset >= sticky) {
+  if(window.pageYOffset >= sticky && window.innerWidth > 1150) {
     mainNav.classList.add("sticky");
     mainLogo.classList.add("fadeLogo"); 
     mainLogo.classList.remove("foreground");
     cartLineItems.style.top = "80px";  
-  } else {
+  }else{
     mainNav.classList.remove("sticky");
     mainLogo.classList.remove("fadeLogo");  
     mainLogo.classList.add("foreground");   
-    //console.log(sticky);
     cartLineItems.style.top = "100px";  
   }
 }
@@ -68,7 +64,17 @@ let resetForm = ()=>{
     document.getElementById("formAnimal").value =
     document.getElementById("formChildren").value = "";
 }
+let closedMenu = true;
 
 let loadMobile =()=>{
-    document.getElementById("nonMobileMenu").style.display = "block";
+    if(closedMenu){
+        document.getElementById("nonMobileMenu").style.display = "block";
+        document.getElementById("stickyNav").style.height = "100%";
+        closedMenu = false;
+    }else{
+        document.getElementById("nonMobileMenu").style.display = "none";
+        document.getElementById("stickyNav").style.height = "0%";
+        closedMenu = true;
+    }
+    
 }

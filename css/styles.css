@@ -684,13 +684,14 @@ https://flickity.metafizzy.co
 
 /**********MEDIA QUERIES**************/
 @media(max-width: 1150px){
-    #stickyNav ul{
+    #nonMobileMenu{
         display: none;
     }
     
     #mobileMenu{
         display: block;
         margin: auto;
+        float: right;
     }
     
     #mobileMenu:hover{
@@ -718,6 +719,66 @@ https://flickity.metafizzy.co
     }
     
     .mainNav{
-    height: 100%;    
+        
+    }
+}
+
+@media(max-width: 530px){
+    #createAccount{
+        margin-top: 110px;
+    }
+    
+    .generalFormContainer{
+        display: block;
+        width: 100%;
+        margin: auto;
+        position: relative;
+        left: 0;
+        padding: 0;
+    }
+    
+    #generalForm{
+        margin: auto;
+        width: 100%;
+    }
+    
+    .footerContainer{
+        display: block;
+        position: relative;
+        text-align: center;
+        margin-top: 24px;
+        padding-bottom: 24px;
+    }
+}
+
+@media(max-width: 450px){
+    .generalFormContainer{
+        width: 100%;
+        margin: auto;
+    }
+    #generalForm{
+        padding: 0;
+    }
+    
+    #generalForm h3{
+        padding-left: 5px;
+        padding-right: 5px;
+        width: 80%;
+        margin: auto;
+    }
+    
+    .caption{
+        width: 100%;
+        left: 0px;
+        margin: 0;
+    }
+    #createAccount{
+        margin-top: 140px;
+    }
+    
+    .formContentDynamic{
+        margin-top: -300px;
+        width: 80%;
+        height: 100%;
     }
 }
