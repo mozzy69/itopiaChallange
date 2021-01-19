@@ -11,33 +11,34 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="css/styles.css">
 	<link rel="icon" type="image/x-icon" href=""/>
+    <style>
+        
+    </style>
 </head>
 
 <body>
 	<header>
     <nav>
-        <div class="foreground" id="logo">
+        <div class="foreground logo" id="mainLogo">
         <picture>
             <source media="(max-width: 360px)" srcset="images/kanba.png">
             <img src="images/kanbax2.png">
         </picture>
         </div>
-        <div class="foreground" id="mainNav">
+        <div class="mainNav" id="stickyNav">
             <ul>
-                <li>Bedroom</li>
-                <li>Study</li>
-                <li>Playroom</li>
-                <li>Accessories</li>
-                <li>Storage</li>
-                <li>Toys</li>
-                <ul>
-                    <li><img src="images/icon-header-account.svg" alt="account icon" class="navIcons"><span>Account</span></li>
-                    <li><img src="images/love-heart-keyhole.svg" alt="heart icon" class="navIcons"><span>Wishlist</span></li>
-                    <li><img src="images/shopping-cart.svg" class="navIcons"><span>Cart</span></li>
-                    <li><div class="generalButton">0</div></li>
-                </ul>
+                <li><a href="#">Bedroom</a></li>
+                <li><a href="#">Study</a></li>
+                <li><a href="#">Playroom</a></li>
+                <li><a href="#">Accessories</a></li>
+                <li><a href="#">Storage</a></li>
+                <li><a href="#">Toys</a></li>
+                <li><a href="#"><img src="images/icon-header-account.svg" alt="account icon" class="navIcons">Account</a></li>
+                <li><a href="#"><img src="images/love-heart-keyhole.svg" alt="heart icon" class="navIcons">Wishlist</a></li>
+                <li><a href="#"><img src="images/shopping-cart.svg" class="navIcons">Cart</a></li>
+                <li><div class="generalButton">0</div></li>
             </ul>
-        </div>
+        </div>      
     </nav>
     </header>
 	<main>
@@ -148,6 +149,7 @@
                     <input class="formInput" type="text" placeholder="Favourite color">
                     <input class="formInput" type="text" placeholder="Favourite color">
                     <input class="formInput" type="text" placeholder="No. of children">
+                    <button type="button" class="generalButton" id="generalButton_form">Submit</button>
                 </form>    
             </div>
         </div>
