@@ -37,6 +37,18 @@ button:hover{
     padding-bottom: 16px;
 }
 
+#mobileMenu{
+    display: none;
+}
+
+.mobileMenu_burger{
+    width: 50px;
+    height: 10px;
+    background-color: darkgray;
+    margin-bottom: 6px;
+    border-radius: 20px;
+}
+
 .mainNav{
     position: relative;
     z-index: 1;
@@ -671,4 +683,41 @@ https://flickity.metafizzy.co
 }
 
 /**********MEDIA QUERIES**************/
-
+@media(max-width: 1150px){
+    #stickyNav ul{
+        display: none;
+    }
+    
+    #mobileMenu{
+        display: block;
+        margin: auto;
+    }
+    
+    #mobileMenu:hover{
+        background-color: #fff;
+    }
+    
+    .mainNav ul li{
+    display: block;
+    font-size: 18px;
+    margin-bottom: 12px;    
+    }
+    
+    .mainNav ul li{
+        width:100%;
+    }
+    
+    .mainNav ul li img{
+        display: none;
+    }
+    
+    #cartNumItems{
+        width: 100%;
+        margin: auto;
+        text-align: center;
+    }
+    
+    .mainNav{
+    height: 100%;    
+    }
+}

@@ -69,18 +69,6 @@ let resetForm = ()=>{
     document.getElementById("formChildren").value = "";
 }
 
-let userData = ()=>{
-                    var xhr = new XMLHttpRequest(); 
-                    xhr.onreadystatechange = function() {
-                    if (this.readyState == 4 && this.status == 200) {
-                        // Response
-                        var response = this.responseText;
-                        //console.log(response);
-                        document.getElementById("logOutInfo").innerHTML = response;
-                        document.getElementById("accountLoginOut").innerHTML = "<li class=\"nav-item\"><a class=\"nav-link\" href=\"#\" data-toggle=\"modal\" data-target=\"#loginMain\" data-dismiss=\"modal\">Log in</a></li>";
-                           }
-                        };
-                        xhr.open("POST", "./incl/logout.php", true);
-                        xhr.setRequestHeader("Content-Type", "application/json");
-                        xhr.send();
-                    }
+let loadMobile =()=>{
+    document.getElementById("nonMobileMenu").style.display = "block";
+}
