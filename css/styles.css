@@ -45,6 +45,12 @@ button:hover{
     background-color: #fff;
 }
 
+.transMobile{
+    position: absolute;
+    right: 18px;
+    top: -170px;
+    }
+
 .mobileMenu_burger{
     width: 50px;
     height: 10px;
@@ -71,7 +77,6 @@ button:hover{
     right: 0;
     padding-right: 20px;
     text-align: right;
-    
 }
 
 .mainNav{
@@ -784,6 +789,9 @@ https://flickity.metafizzy.co
         transform: translateY(0px);
         transition: all .3s;
         }
+    #stickyNav{
+        /*margin-top: -20px;*/
+    }
 
 }
 
@@ -802,6 +810,10 @@ https://flickity.metafizzy.co
     
     #mobileMenu:hover{
         background-color: #fff;
+    }
+    
+    .mainNav ul{
+        padding-top: 10px;
     }
     
     .mainNav ul li{

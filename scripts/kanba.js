@@ -74,11 +74,16 @@ let loadMobile =()=>{
     if(closedMenu){
         nonMobileMenu.style.display = "block";
         nonMobileMenu.classList.add("mobileBKG");
-        //document.getElementById("stickyNav").style.height = "100%";
+        document.getElementById("stickyNav").style.top = "180px";
+        document.getElementById("mobileMenu").classList.add("transMobile");
+        //document.getElementById("mainLogo").style.width = "100%";
         closedMenu = false;
     }else{
         nonMobileMenu.style.display = "none";
-        document.getElementById("stickyNav").style.height = "0%";
+        nonMobileMenu.classList.remove("mobileBKG");
+        document.getElementById("stickyNav").style.top = "20px";
+        document.getElementById("mobileMenu").classList.remove("transMobile");
+        //document.getElementById("stickyNav").style.height = "0%";
         closedMenu = true;
     }
     
@@ -101,10 +106,11 @@ function getWidth() {
 //correct menu
 let printW = ()=>{
     document.getElementById("pageWidth").innerHTML = getWidth();
-    if(getWidth()>1100){
-        //document.getElementById("nonMobileMenu").style.display = "block";
+    if(getWidth()>=1085){
+        document.getElementById("nonMobileMenu").style.display = "block";
+    }else{
+        document.getElementById("nonMobileMenu").style.display = "none";
     }
-    
 }
 window.addEventListener('resize', printW);
 
