@@ -2,7 +2,8 @@ body, html {
   height: 100%;
   margin: 0;
   text-decoration: none;
-  font-family: 'Raleway', sans-serif;    
+  font-family: 'Raleway', sans-serif;  
+  scroll-behavior: smooth;    
 }
 
 button:hover{
@@ -39,14 +40,24 @@ button:hover{
 
 #mobileMenu{
     display: none;
+    padding: 0;
+    padding: 10px;
+    background-color: #fff;
 }
 
 .mobileMenu_burger{
     width: 50px;
     height: 10px;
-    background-color: darkgray;
-    margin-bottom: 6px;
+    background-color: #C82975;
+    margin-bottom: 5px;
+    margin-top: 5px;
     border-radius: 20px;
+}
+
+#mobileMenu:hover{
+    box-shadow: 0px 3px 6px #000029;
+    transition: all 0.3s;
+    vertical-align: middle;
 }
 
 .mainNav{
@@ -68,28 +79,33 @@ button:hover{
 
 .mainNav ul{
     display: inline-block;
-    margin-top: 10px;
+    margin-top: 8px;
     float: right;
+    padding: 0;
 }
 
 .mainNav ul li{
     display: inline-block;
     font-size: 18px;
+    padding-left: 2px;
+    padding-right: 2px;
 }
 
 .mainNav ul li a{
     text-decoration: none;
     color : #222;
-    padding: 6px;
     border-radius: 20px;
+    padding: 5px;
+    
 }
 
 .mainNav ul li a:hover{
     background-color: #C82975;
     color: #fff;
     border-radius: 20px;
-    padding: 6px;
     transition: all 0.5s;
+    padding: 5px;
+    
 }
 
 .mainNav button{
@@ -100,7 +116,7 @@ button:hover{
     display: inline-block;
     font-size: 18px;
     border: none;
-    background-color: #fff;
+    background-color: transparent;
     font-family: 'Raleway', sans-serif;
 }
 
@@ -119,7 +135,11 @@ button:hover{
 }
 
 #cartNumItems{
-    padding-right: 12px;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    margin: 1px;
 }
 
 .sticky{
@@ -241,13 +261,14 @@ button:hover{
   position: absolute;
   left: 0;
   top: 50%;
-  width: 60%; 
+  width: 50%; 
   margin-left: 25%;    
   text-align: center;
 }
 
 .foreground {   
   padding: 18px;
+  padding-left: 0;
   font-size: 25px;
   letter-spacing: 1px;
   box-shadow: 0px 3px 6px #000029;
@@ -260,6 +281,7 @@ button:hover{
 #mainSlogan{
     max-width: 358px;
     margin: auto;
+    padding-left: 18px;
 }
 
 .generalButton{
@@ -275,6 +297,11 @@ button:hover{
 #createAccount{
   margin-top: 85px;
   max-width: 258px;    
+}
+
+#createAccount:hover{
+    box-shadow: 0px 3px 6px #000029;
+    transition: all 0.3s;
 }
 
 /****************PRODUCTS****************/
@@ -343,7 +370,8 @@ button:hover{
   max-width: 400px;
   margin: -10px auto;
   padding: 16px;
-  background: #F7F7F7;      
+  background: #F7F7F7;
+  transition: all 0.3s;    
 }
 
 #generalForm h3{
@@ -386,7 +414,6 @@ button:hover{
 
 .formContentDynamic{
     width: 40%;
-    height: 100px;
     background-color: aliceblue;
     position: relative;
     z-index: 3;
@@ -396,6 +423,32 @@ button:hover{
     margin: -10px auto;
     padding: 16px;
     background: #F7F7F7; 
+    transition: all 0.3s;
+}
+
+.formContentDynamic h3{
+    text-align: center;
+    color: #C82975;
+    margin-top: 48px;
+    margin-bottom: 0;
+}
+
+.formContentDynamic p{
+    text-align: center;
+    width: 80%;
+    margin: auto;
+    padding: 18px;
+}
+
+.formContentClose{
+    float: right;
+    background-color: transparent;
+    border: none;
+    font-size: 18px;
+}
+
+.scaleForm{
+    transform: scaleY(0);
     transition: all 0.3s;
 }
 
@@ -683,7 +736,40 @@ https://flickity.metafizzy.co
 }
 
 /**********MEDIA QUERIES**************/
-@media(max-width: 1150px){
+@media(max-width: 1180px){
+    .logo{
+        left: -140px;
+        height: 48px;
+        position: fixed;
+        top: 0;
+        z-index: 3;
+        transition: all 0.2s ease-out;
+        box-shadow: 0px 3px 6px #ffffff; 
+        border-radius: 0px;
+        padding-top: 20px;
+        padding-right: 20px;
+        padding-bottom: 16px;
+        border-radius: 70px;
+        }
+
+    .logo img{
+        width: 50%;
+        float: right;
+    }
+    
+    .mainNav{
+        position: fixed;
+        width: 100%;
+        top: 0;
+        right: 0;
+        border-radius: 0;
+        transform: translateY(0px);
+        transition: all .3s;
+        }
+
+}
+
+@media(max-width: 1100px){
     #nonMobileMenu{
         display: none;
     }
@@ -719,7 +805,11 @@ https://flickity.metafizzy.co
     }
     
     .mainNav{
-        
+       background-color: transparent; 
+       box-shadow: none;
+       padding: 0;
+       padding-right: 18px;  
+       top: 10px;    
     }
 }
 

@@ -1,28 +1,28 @@
 var flkty = new Flickity( '.main-gallery', {
-  // options
   cellAlign: 'left',
   contain: true,
   wrapAround: true    
 });
 
-// Get the navbar
 let mainNav = document.getElementById("stickyNav");
-// Get the offset position of the navbar
 let sticky = mainNav.offsetTop;
 let mainLogo = document.getElementById("mainLogo");
+let cartLineItems = document.getElementById("cartLineItems");
+let cartLineItemsY = "100px";
 
-// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
 function stickyNav() {    
   if(window.pageYOffset >= sticky && window.innerWidth > 1150) {
     mainNav.classList.add("sticky");
     mainLogo.classList.add("fadeLogo"); 
     mainLogo.classList.remove("foreground");
-    cartLineItems.style.top = "80px";  
+    cartLineItemsY = "80px";
+    cartLineItems.style.top = cartLineItemsY;  
   }else{
     mainNav.classList.remove("sticky");
     mainLogo.classList.remove("fadeLogo");  
-    mainLogo.classList.add("foreground");   
-    cartLineItems.style.top = "100px";  
+    mainLogo.classList.add("foreground"); 
+    cartLineItemsY = "100px";  
+    cartLineItems.style.top = cartLineItemsY;  
   }
 }
 
@@ -31,7 +31,7 @@ window.onscroll = function(){
 };
 
 let displayCart = ()=>{
-    let cartLineItems = document.getElementById("cartLineItems");
+    cartLineItems.style.top = cartLineItemsY;
     cartLineItems.classList.toggle("cartDisplay");
 }
 
@@ -44,6 +44,7 @@ let updateCartItems =()=>{
 }
 
 let getUserData = ()=>{
+    document.getElementById("generalForm").classList.toggle("scaleForm");
     let firstName = document.getElementById("formFirstName").value;
     let city = document.getElementById("formCity").value;
     let color = document.getElementById("formColor").value;
@@ -52,10 +53,11 @@ let getUserData = ()=>{
     console.log(firstName + city + color + animal + children);
     let formContent = document.getElementById("formContent");
     formContent.classList.add("formContentDynamic");
-    formContent.innerHTML = "<button onclick=\"resetForm()\">&#10006;</button>" + "Hi " + firstName + ". Thanks for signing up! <br> Your city is " +city + " and your favourite color is "+ color + ", your favourite animal is " + animal + " and you have "+children+ " children. We'll be in touch shorly.";
+    formContent.innerHTML = "<button class=\"formContentClose\" onclick=\"resetForm()\">&#10006;</button>" + "<h3>Hi " + firstName + ".</h3> <p><br>Thanks for signing up! <br> Your city is " +city + " and your favourite color is "+ color + ", your favourite animal is " + animal + " and you have "+children+ " child/children.<br> Thanks again and we'll be in touch shorly.</p>";
 }
 
 let resetForm = ()=>{
+    document.getElementById("generalForm").classList.toggle("scaleForm");
     let formContent = document.getElementById("formContent");
     formContent.innerHTML = "";
     formContent.classList.toggle("formContentDynamic");
@@ -64,6 +66,7 @@ let resetForm = ()=>{
     document.getElementById("formAnimal").value =
     document.getElementById("formChildren").value = "";
 }
+
 let closedMenu = true;
 
 let loadMobile =()=>{
@@ -78,3 +81,25 @@ let loadMobile =()=>{
     }
     
 }
+
+let gotoSignUp = ()=>{
+    document.getElementById("generalForm").scrollIntoView();
+}
+
+function getWidth() {
+  return Math.max(
+    document.body.scrollWidth,
+    document.documentElement.scrollWidth,
+    document.body.offsetWidth,
+    document.documentElement.offsetWidth,
+    document.documentElement.clientWidth
+  );
+}
+
+
+let printW = ()=>{
+    document.getElementById("pageWidth").innerHTML = getWidth();
+}
+window.addEventListener('resize', printW);
+
+

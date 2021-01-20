@@ -17,7 +17,6 @@
 </head>
 
 <body>
-	
     <nav>
         <header>
         <div class="foreground logo" id="mainLogo">
@@ -76,11 +75,12 @@
     <!--------------Hero Image-------------->
     <section>    
         <div class="bgimg-1">
+            <div id="pageWidth"></div>
             <div class="caption">
                 <h1 class="foreground" id="mainSlogan">Lifestyle decor for fashionable families.</h1>
             </div>
             <div class="caption" >
-                <button class="generalButton" id="createAccount">Create an account</button>
+                <button class="generalButton" id="createAccount" onclick="gotoSignUp()">Create an account</button>
             </div>
             
         </div>
@@ -170,7 +170,7 @@
     <!-----------End New Products----------->    
     <!----------------Outro----------------->
     <section>
-        <div class="bgimg-2">
+        <div class="bgimg-2" id="bgimg-2Fade">
         <div class="generalFormContainer">
             <div id="generalForm">
                 <h3>Tell us about yourself</h3>
