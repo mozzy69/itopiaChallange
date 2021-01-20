@@ -60,6 +60,20 @@ button:hover{
     vertical-align: middle;
 }
 
+.mobileBKG{
+    background-color: #fff;
+    transition: all 0.3s;
+    width: 100%;
+    position: absolute;
+    z-index: 0;
+    top: 0px;
+    left: 0px;
+    right: 0;
+    padding-right: 20px;
+    text-align: right;
+    
+}
+
 .mainNav{
     position: relative;
     z-index: 1;
@@ -126,6 +140,10 @@ button:hover{
     border-radius: 20px;
     padding: 6px;
     transition: all 0.5s;
+}
+
+#nonMobileMenu{
+    transition: all 0.3s;
 }
 
 .navIcons{
@@ -772,6 +790,8 @@ https://flickity.metafizzy.co
 @media(max-width: 1100px){
     #nonMobileMenu{
         display: none;
+        transform: translateY(-100px);
+        transition: all 0.3s;
     }
     
     #mobileMenu{
@@ -810,6 +830,30 @@ https://flickity.metafizzy.co
        padding: 0;
        padding-right: 18px;  
        top: 10px;    
+    }
+}
+
+@media(max-width: 616px){
+    #createAccount{
+        margin-top: 110px;
+    }
+    .generalFormContainer{
+        display: block;
+        position: relative;
+        width: 100%;
+        left: 0;
+        padding: 0;
+    }
+    #generalForm{
+        width: 100%;
+        margin: auto;
+    }
+    .footerContainer{
+        display: block;
+        position: relative;
+        text-align: center;
+        margin-top: 24px;
+        padding-bottom: 24px;
     }
 }
 

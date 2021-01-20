@@ -68,14 +68,16 @@ let resetForm = ()=>{
 }
 
 let closedMenu = true;
+let nonMobileMenu = document.getElementById("nonMobileMenu");
 
 let loadMobile =()=>{
     if(closedMenu){
-        document.getElementById("nonMobileMenu").style.display = "block";
-        document.getElementById("stickyNav").style.height = "100%";
+        nonMobileMenu.style.display = "block";
+        nonMobileMenu.classList.add("mobileBKG");
+        //document.getElementById("stickyNav").style.height = "100%";
         closedMenu = false;
     }else{
-        document.getElementById("nonMobileMenu").style.display = "none";
+        nonMobileMenu.style.display = "none";
         document.getElementById("stickyNav").style.height = "0%";
         closedMenu = true;
     }
@@ -96,9 +98,13 @@ function getWidth() {
   );
 }
 
-
+//correct menu
 let printW = ()=>{
     document.getElementById("pageWidth").innerHTML = getWidth();
+    if(getWidth()>1100){
+        //document.getElementById("nonMobileMenu").style.display = "block";
+    }
+    
 }
 window.addEventListener('resize', printW);
 
