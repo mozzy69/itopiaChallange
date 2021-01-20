@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 	<meta charset="utf-8">
 	<title>Welcome to Kanba</title>
@@ -10,10 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="css/styles.css">
-	<link rel="icon" type="image/x-icon" href=""/>
-    <style>
-        
-    </style>
+	<!--<link rel="icon" type="image/x-icon" href=""/>-->
 </head>
 
 <body>
@@ -47,26 +43,26 @@
         </div>
         <div class="cartSlideOut" id="cartLineItems">
             <table>
-            <tr>
-                <th>Cart</th>
-                <th><button onclick="displayCart()">&#10006;</button></th>
-            </tr>
-            <tr>
-                <td><img src="images/products/cartItem1.png" alt="cart Item 01"></td>
-                <td>R000.00</td>
-            </tr>
-            <tr>
-                <td><img src="images/products/cartItem2.png" alt="cart Item 01"></td>
-                <td>R000.00</td>
-            </tr>
-            <tr>
-                <td><img src="images/products/cartItem3.png" alt="cart Item 01"></td>
-                <td>R000.00</td>
-            </tr> 
-            <tr>
-                <td>Subtotal</td>
-                <td>R000.00</td>
-            </tr>  
+                <tr>
+                    <th>Cart</th>
+                    <th><button onclick="displayCart()">&#10006;</button></th>
+                </tr>
+                <tr>
+                    <td><img src="images/products/cartItem1.png" alt="cart Item 01"></td>
+                    <td>R000.00</td>
+                </tr>
+                <tr>
+                    <td><img src="images/products/cartItem2.png" alt="cart Item 01"></td>
+                    <td>R000.00</td>
+                </tr>
+                <tr>
+                    <td><img src="images/products/cartItem3.png" alt="cart Item 01"></td>
+                    <td>R000.00</td>
+                </tr> 
+                <tr>
+                    <td>Subtotal</td>
+                    <td>R000.00</td>
+                </tr>  
             </table>
             <div class="generalButton" style="width: 100%; margin-top: 12px; margin-bottom: 12px; ">Checkout</div>  
         </div>
@@ -91,6 +87,7 @@
         <article>
         <div class="newProductsContainer">
             <ul class="newProducts main-gallery">
+                <!--Begin Products Loop-->
                 <li class="productMain gallery-cell">
                     <picture>
                         <source media="(max-width: 360px)" srcset="images/products/cabinet.png">
@@ -206,9 +203,7 @@
     </section>
     <!------------End Outro----------------->    
     </main>
-	
     <script src="scripts/flickity.pkgd.min.js"></script>
     <script src="scripts/kanba.js"></script>
 </body>
-
 </html>

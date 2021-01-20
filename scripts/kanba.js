@@ -1,15 +1,18 @@
+//Init Flickity
 var flkty = new Flickity( '.main-gallery', {
   cellAlign: 'left',
   contain: true,
   wrapAround: true    
 });
 
+//General data
 let mainNav = document.getElementById("stickyNav");
 let sticky = mainNav.offsetTop;
 let mainLogo = document.getElementById("mainLogo");
 let cartLineItems = document.getElementById("cartLineItems");
 let cartLineItemsY = "100px";
 
+//Sticky Menu
 function stickyNav() {    
   if(window.pageYOffset >= sticky && window.innerWidth > 1150) {
     mainNav.classList.add("sticky");
@@ -30,11 +33,18 @@ window.onscroll = function(){
     stickyNav();
 };
 
+//Scroll to form
+let gotoSignUp = ()=>{
+    document.getElementById("generalForm").scrollIntoView();
+}
+
+//Cart Line items
 let displayCart = ()=>{
     cartLineItems.style.top = cartLineItemsY;
     cartLineItems.classList.toggle("cartDisplay");
 }
 
+//Add items to cart
 let updateCartItems =()=>{
     let cartItems = document.getElementById("cartNumItems");
     let itemsInCart = parseInt(cartItems.innerHTML);
@@ -43,6 +53,7 @@ let updateCartItems =()=>{
     cartItems.innerHTML = itemsInCart;
 }
 
+//Form Submission
 let getUserData = ()=>{
     document.getElementById("generalForm").classList.toggle("scaleForm");
     let firstName = document.getElementById("formFirstName").value;
@@ -56,6 +67,7 @@ let getUserData = ()=>{
     formContent.innerHTML = "<button class=\"formContentClose\" onclick=\"resetForm()\">&#10006;</button>" + "<h3>Hi " + firstName + ".</h3> <p><br>Thanks for signing up! <br> Your city is " +city + " and your favourite color is "+ color + ", your favourite animal is " + animal + " and you have "+children+ " child/children.<br> Thanks again and we'll be in touch shorly.</p>";
 }
 
+//Resets the form to default values
 let resetForm = ()=>{
     document.getElementById("generalForm").classList.toggle("scaleForm");
     let formContent = document.getElementById("formContent");
@@ -67,32 +79,29 @@ let resetForm = ()=>{
     document.getElementById("formChildren").value = "";
 }
 
+
+//Mobile Menu
 let closedMenu = true;
 let nonMobileMenu = document.getElementById("nonMobileMenu");
-
+//Open_Close mobile menu
 let loadMobile =()=>{
     if(closedMenu){
         nonMobileMenu.style.display = "block";
         nonMobileMenu.classList.add("mobileBKG");
         document.getElementById("stickyNav").style.top = "180px";
         document.getElementById("mobileMenu").classList.add("transMobile");
-        //document.getElementById("mainLogo").style.width = "100%";
         closedMenu = false;
     }else{
         nonMobileMenu.style.display = "none";
         nonMobileMenu.classList.remove("mobileBKG");
         document.getElementById("stickyNav").style.top = "20px";
         document.getElementById("mobileMenu").classList.remove("transMobile");
-        //document.getElementById("stickyNav").style.height = "0%";
         closedMenu = true;
     }
     
 }
 
-let gotoSignUp = ()=>{
-    document.getElementById("generalForm").scrollIntoView();
-}
-
+//Get window width
 function getWidth() {
   return Math.max(
     document.body.scrollWidth,
@@ -103,7 +112,7 @@ function getWidth() {
   );
 }
 
-//correct menu
+//Correct menu behaviour
 let printW = ()=>{
     document.getElementById("pageWidth").innerHTML = getWidth();
     if(getWidth()>=1085){
@@ -113,5 +122,3 @@ let printW = ()=>{
     }
 }
 window.addEventListener('resize', printW);
-
-
